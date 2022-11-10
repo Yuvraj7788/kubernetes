@@ -17,7 +17,7 @@ RUN unzip photogenic.zip
 RUN cp -rvf photogenic/* .
 RUN rm -rf photogenic photogenic.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND","/bin/bash","trap : TERM INT; sleep infinity & wait"]
-EXPOSE 80 
+EXPOSE 80 22
 
 
 # FROM  centos:latest
