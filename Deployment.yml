@@ -16,8 +16,9 @@ spec:
         - name: mrdevops
           image: anantgarg123/pipeline-demo:latest
           imagePullPolicy: Always
-          # command: [ "/bin/bash", "-c", "--" ]
-          # args: [ "while true; do sleep 30; done;" ]
+          
           ports:
-          - containerPort: 80
-            hostPort : 22
+          - containerPort: 80 22
+          command: [ "/bin/bash", "-c", "--" ]
+          args: [ "while true; do sleep 30; done;" ]
+            
