@@ -14,9 +14,9 @@ spec:
       spec:
        containers:
         - name: mrdevops
-          image: anantgarg123/pipeline-demo
+          image: anantgarg123/pipeline-demo:latest
+          imagePullPolicy: Always
           command: [ "/bin/bash", "-c", "--" ]
           args: [ "while true; do sleep 30; done;" ]
-          imagePullPolicy: Always
           ports:
           - containerPort: 80
