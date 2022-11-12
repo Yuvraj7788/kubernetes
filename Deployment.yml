@@ -1,19 +1,19 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-   name: mrdevops
+   name: project
 spec:
    replicas: 2
    selector:      # tells the controller which pods to watch/belong to
     matchLabels:
-     app: mrdevops
+     app: project
    template:
       metadata:
         labels:
-          app: mrdevops
+          app: project
       spec:
        containers:
-        - name: mrdevops
+        - name: project
           image: anantgarg123/pipeline-demo
           imagePullPolicy: Always
           command: [ "/bin/bash", "-c", "--" ]
