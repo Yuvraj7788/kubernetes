@@ -5,6 +5,7 @@ metadata:
   labels:
     app: mrdevops
 spec:
+  type: nodePort
   selector:
     app: mrdevops
   ports:
