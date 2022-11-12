@@ -1,14 +1,14 @@
 kind: Service                             
 apiVersion: v1
 metadata:
-  name: project
+  name: mrdevops
   labels:
-    app: project
+    app: mrdevops
 spec:
   ports:
     - port: 8080                               
       targetPort: 80                    
-      nodePort: 30004
+      nodePort: 31200
   selector:
-    app: project                    
+    app: mrdevops                    
   type: LoadBalancer                   
