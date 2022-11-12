@@ -29,5 +29,5 @@ RUN yum install -y httpd \
  RUN unzip shine.zip
  RUN cp -rvf shine/* .
  RUN rm -rf shine shine.zip
- CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+ CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"."/bin/bash"]
  EXPOSE 80
