@@ -5,10 +5,10 @@ metadata:
   labels:
     app: mrdevops
 spec:
+  selector:
+    app: mrdevops
   ports:
     - port: 8080                               
       targetPort: 80                    
-      nodePort: 31200
-  selector:
-    app: mrdevops                    
+      nodePort: 31200                   
   type: LoadBalancer                   
