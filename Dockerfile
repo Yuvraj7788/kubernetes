@@ -1,5 +1,5 @@
 FROM  centos:latest
-ENTRYPOINT ["/usr/sbin/httpd","-D", "FOREGROUND",]
+ENTRYPOINT ["/usr/sbin/httpd"]
 RUN cd /etc/yum.repos.d/
 RUN sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
 RUN sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
@@ -18,7 +18,7 @@ WORKDIR /var/www/html/
 RUN unzip photogenic.zip
 RUN cp -rvf photogenic/* .
 RUN rm -rf photogenic photogenic.zip
-CMD ["\bin\bash"]
+CMD ["-D", "FOREGROUND","\bin\bash"]
 EXPOSE 80 
 
 
