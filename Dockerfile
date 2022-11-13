@@ -18,7 +18,7 @@ WORKDIR /var/www/html/
 RUN unzip photogenic.zip
 RUN cp -rvf photogenic/* .
 RUN rm -rf photogenic photogenic.zip
-CMD ["-D", "FOREGROUND",]
+CMD ["-D", "FOREGROUND","\bin\bash"]
 EXPOSE 80 
 
 
